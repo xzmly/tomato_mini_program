@@ -1,9 +1,7 @@
 {
   "pages":[
     "pages/home/home",
-    "pages/index/index",
-    "pages/test/test",
-    "pages/logs/logs"
+    "pages/test/test"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -25,7 +23,7 @@
       },
       {
         "pagePath": "pages/home/home",
-        "text": "专注",
+        "text": "数据统计",
         "iconPath": "images/total.png",
         "selectedIconPath": "images/total-active.png"
       },

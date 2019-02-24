@@ -1,11 +1,11 @@
 <view class="home-container">
   <scroll-view class="todoList" scroll-y="true">
-    <view class="item" wx:for="{{lists}}" wx:key="item.id">
-      <view class="select"></view>
-      <text>{{item.text}}</text>
+    <view class="item">
+      <view class="select {{item.selected && 'active'}}"></view>
+      <text>以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关</text>
     </view>
   </scroll-view>
-  <t-button type="change" class="createButton" bindtap='fn'>创建任务</t-button>
+  <t-button type="change" class="createButton">创建任务</t-button>
   <view class="tomato-wrapper">
     <view class="tomato">
      <t-clock text="点击开始闹钟"></t-clock>
