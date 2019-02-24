@@ -1,0 +1,23 @@
+function dateFormat(date, format){
+  var time = getDate(date)
+  var rep = getRegExp("([yMdhmsqS])+", "g")
+  var map = {
+    M: time.getMonth() + 1,
+    d: time.getDay(),
+    h: time.getHours(),
+    m: time.getMinutes(),
+    s: time.getSeconds()
+  }
+  format = format.replace(rep, function (all, t) {
+    var v = map[t] + ''
+    v = v.length === 1 ? "0" + v : v.substring(0, 2)
+    if (t === 'y') {
+      var year = time.getFullYear() + ''
+      return year.substring(0, 4)
+    }
+    return v
+  })
+
+  return format
+}
+module.exports = { dateFormat: dateFormat }

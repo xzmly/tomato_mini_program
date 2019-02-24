@@ -11,3 +11,6 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+
+<navigator url="/pages/test/test?id=1">go to test</navigator>

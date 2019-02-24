@@ -1,0 +1,49 @@
+<view class="div1" id="div-{{number}}">{{message}}</view>
+
+<view wx:if="{{condition}}">我是显示的</view>
+<view wx:else>我是不显示的</view>
+
+<view hidden="{{condition}}">我的hidden是true</view>
+
+
+<view wx:for="{{arr}}" wx:for-index="xx" wx:for-item="xxx" wx:key="{{xxx.id}}">
+  {{xx}}我是ID：{{xxx.id}},我是text：{{xxx.text}}
+</view>
+
+
+生命周期
+改变data里面的变量
+改变data里面的obj 和 arr 需要注意的事情
+增加一个class
+
+---------------------------
+<view>{{str}}</view>
+<button bindtap="reverseStr">我是一个按钮</button>
+---------------------------
+<view wx:for="{{arr}}">
+  {{index}}，{{item}}
+</view>
+<button bindtap="pushItem">我是一个按钮</button>
+--------------------------
+<view>{{obj.id}}:{{obj.text}}</view>
+<button bindtap="changeObjText">我是一个按钮</button>
+--------------------------
+<view class="{{xx ? 'active' : ''}}">我会改变颜色</view>
+<button bindtap="changeColoe">我是一个按钮</button>
+--------------------------
+<wxs module="xxx">
+  function click(e,ins){
+    ins.callMethod('testClick',{
+      complete: ins
+    })
+  }
+  module.exports = { click:click }
+</wxs>
+<view bindtap="{{xxx.click}}">点击我</view>
+
+--------------------------
+<wxs src="../../lib/formattor.wxs" module="formattor"/>
+
+<view>
+ 
+</view>

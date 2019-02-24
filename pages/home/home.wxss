@@ -1,0 +1,66 @@
+@import '../../components/button/button.wxss';
+@import '../../components/clock/clock.wxss';
+
+
+.home-container { 
+  height: 100vh;
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+ }
+
+  .tomato-wrapper {
+    flex: 1;
+    margin-top: 66rpx;
+    padding: 0 28rpx;
+  }
+  .tomato-wrapper .tomato {
+    background:#EEF7F6;
+    border-radius: 8rpx;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.10);
+    height: 473rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+ .createButton { 
+   position: absolute;
+   top: 580rpx;
+   left: 50%;
+   transform: translateX(-50%);
+  }
+
+ .todoList { 
+   padding: 13rpx 30rpx;
+   color: #333;
+   font-size: 28rpx;
+   box-sizing: border-box;
+   max-height: 552rpx;
+  }
+  .todoList .item { 
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0rpx 2rpx 6rpx 0rpx rgba(0,0,0,0.10);
+    border-radius: 8rpx;
+    padding: 17rpx 50rpx;
+    margin-bottom: 24rpx;
+   }
+    .todoList .item:last-child { margin: 0; }
+    .todoList .item text {
+      flex: 1;
+      overflow : hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .todoList .item .select {
+     border-radius: 50%;
+     width: 28rpx;
+     height: 28rpx;
+     border: 4rpx solid #FE996F;
+     margin-right: 30rpx;
+    }

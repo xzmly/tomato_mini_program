@@ -1,0 +1,21 @@
+.clock { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.clock text {
+  color: #fff;
+  font-size: 26rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.clock image { 
+  width: 320rpx;
+  height: 320rpx;
+}
+.active {
+  opacity: 0.9;
+}

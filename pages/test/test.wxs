@@ -1,0 +1,9 @@
+var fn = function (d) {
+  return d
+}
+var str = "hello"
+module.exports = {
+  str: str,
+  fn: fn
+}
+module.exports.msg = "12312313"
