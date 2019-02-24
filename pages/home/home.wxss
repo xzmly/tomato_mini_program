@@ -48,8 +48,8 @@
     padding: 17rpx 50rpx;
     margin-bottom: 24rpx;
    }
-    .todoList .item:last-child { margin: 0; }
-    .todoList .item text {
+  .todoList .item:last-child { margin: 0; }
+  .todoList .item text {
       flex: 1;
       overflow : hidden;
       text-overflow: ellipsis;
@@ -57,10 +57,22 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
     }
-    .todoList .item .select {
+  .todoList .item .select {
      border-radius: 50%;
      width: 28rpx;
      height: 28rpx;
      border: 4rpx solid #FE996F;
      margin-right: 30rpx;
+     position: relative;
     }
+  .todoList .item .select.active::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    background: #FE996F;
+  }  
