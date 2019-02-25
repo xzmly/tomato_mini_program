@@ -1,9 +1,9 @@
 <view class="home-container">
   <scroll-view class="todoList" scroll-y="true">
-    <view class="item">
-      <view class="select {{item.selected && 'active'}}"></view>
-      <text>以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关所以我们提出了将关照生活、关</text>
-    </view>
+    <!-- <view class="item">
+      <view class="select"></view>
+      <text></text>
+    </view> -->
   </scroll-view>
   <t-button type="change" class="createButton">创建任务</t-button>
   <view class="tomato-wrapper">
@@ -11,4 +11,5 @@
      <t-clock text="点击开始闹钟"></t-clock>
     </view>
   </view>
+  <t-confirm placeholder="我完成了什么" bindconfirm="confirm" bindcancel="cancel" visible="{{visible}}"></t-confirm>
 </view>

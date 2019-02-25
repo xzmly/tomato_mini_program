@@ -1,5 +1,6 @@
 @import '../../components/button/button.wxss';
 @import '../../components/clock/clock.wxss';
+@import '../../components/confirm/confirm.wxss';
 
 
 .home-container { 

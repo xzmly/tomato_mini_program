@@ -1,0 +1,9 @@
+<view class="cantainer" wx:if="{{visible}}">
+  <view class="confirm">
+  <textarea placeholder="{{placeholder}}" bindinput="watchValue" value="{{value}}"></textarea>
+  <view class="actions">
+    <view hover-class='active' class="sure" bindtap="confirm">确定</view>
+    <view hover-class='active' bindtap="cancel">取消</view>
+  </view>
+  </view>
+</view>
