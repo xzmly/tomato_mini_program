@@ -1,0 +1,12 @@
+/* pages/tomato/tomato.wxss */
+.cantainer {
+  background: #F0F7F6;
+  height: 100vh;
+}
+.clock {
+  padding-top: 282rpx;
+  padding-bottom: 139rpx;
+}
+.stop {
+  margin-bottom: 48rpx;
+}

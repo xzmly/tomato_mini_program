@@ -1,5 +1,5 @@
 button::after{ border: none; }
-.button-hover { opacity: 0.9; }
+.button-hover { opacity: 0.6; }
 .tomato-button {
   width: 540rpx;
   height: 80rpx;

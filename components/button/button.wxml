@@ -1,1 +1,1 @@
-<button class="tomato-button {{type === 'default' ? 'default' : 'change'}} {{size === 'mini' && 'mini'}}">创建任务</button>
+<button class="tomato-button {{type === 'default' ? 'default' : 'change'}} {{size === 'mini' && 'mini'}}">{{text}}</button>
