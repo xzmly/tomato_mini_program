@@ -1,1 +1,96 @@
-/* pages/me/me.wxss */
+.cantainer { 
+  background: #F6F6F6;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+ }
+.header { 
+  height: 170rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  color: #FE996F;
+  font-size: 22rpx;
+  padding: 0 45rpx;
+  margin-bottom: 23rpx;
+ }
+.header .avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.header .details { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+ }
+
+.header .details .name {
+  color: black;
+  font-size: 32rpx;
+  padding-bottom: 22rpx;
+}
+
+.tabs { 
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #333;
+  padding: 20rpx 0;
+  margin-bottom: 24rpx;
+}
+.tabs > view { 
+  position: relative;
+  height: 100%;
+ }
+.tabs > view.active::after {
+  content: "";
+  width: 80%;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background: #FE996F;
+  position: absolute;
+  left: 50%;
+  bottom: -16rpx;
+  transform: translate(-50%,-50%);
+}
+
+.cantainer .lists { 
+  flex: 1;
+  padding: 0 24rpx;
+  box-sizing:  border-box;
+  overflow: scroll;
+ }
+
+.cantainer .lists .item {
+  background: #fff;
+  font-size: 32rpx;
+  color: #333;
+  border-radius: 8rpx;
+  padding: 16rpx 28rpx 35rpx 40rpx;
+  box-shadow: 0rpx 2rpx 6rpx 0rpx rgba(0,0,0,0.10);
+  margin-bottom: 32rpx;
+}
+
+.cantainer .lists .item .time {
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-bottom: 24rpx;
+}
+.cantainer .lists .item .content {
+  display: flex;
+  padding-bottom: 24rpx;
+}
+.cantainer .lists .item .content text {
+  padding-right: 25rpx;
+}
+.cantainer .lists .item .content detail {
+  flex: 1;
+  flex-wrap: wrap;
+}
+
