@@ -1,0 +1,10 @@
+<view class="login">
+  <view class="avatar">
+    <open-data type='userAvatarUrl'></open-data>
+  </view>
+  <view class="name-wrap">
+    <open-data type='userNickName' class="name"></open-data>
+  </view>
+  <button class="loginButton">登录</button>
+  <navigator url="/pages/binding/binding" class="binding">还没有与pc端绑定？去绑定 ></navigator>
+</view>

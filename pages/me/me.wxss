@@ -48,6 +48,9 @@
   position: relative;
   height: 100%;
  }
+.tabs > view.hover-active { 
+  opacity: 0.5;
+ }
 .tabs > view.active::after {
   content: "";
   width: 80%;
@@ -93,4 +96,6 @@
   flex: 1;
   flex-wrap: wrap;
 }
+.qr::after { border: none; }
+.qr { background: transparent; color: #FE996F; font-size: 24rpx;}
 
