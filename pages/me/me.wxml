@@ -20,12 +20,24 @@
           data-name="task" bindtap="changeTab">我完成的任务</view>
   </view>
 
-  <scroll-view scroll-y="true" class="lists">
-    <view class="item" wx:for="{{lists}}" wx:for-index="key" wx:key="index">
-      <view class="time">{{key}}</view>
-      <view class="content" wx:for="{{lists[key]}}" wx:for-index="index" wx:key="index">
-        <text>{{item.time}}</text>
-        <view class="detail">{{item.text}}</view>
+  <scroll-view scroll-y="true" class="lists" wx:if="{{tab === 'tomato'}}">
+    <view class="item" wx:for="{{tomatoes}}" wx:for-index="key" wx:key="index">
+      <wxs src="../../lib/formattor.wxs" module="formattor"></wxs>
+      <view class="time">{{formattor.monthFormat(key)}}</view>
+      <view class="content" wx:for="{{tomatoes[key]}}" wx:for-index="index" wx:key="index">
+        <text>{{formattor.dateFormat(item.created_at,"hh:mm")}}</text>
+        <view class="detail">{{item.description}}</view>
+      </view>
+    </view>
+  </scroll-view>
+
+   <scroll-view scroll-y="true" class="lists" wx:if="{{tab === 'task'}}">
+    <view class="item" wx:for="{{todos}}" wx:for-index="key" wx:key="index">
+      <wxs src="../../lib/formattor.wxs" module="formattor"></wxs>
+      <view class="time">{{formattor.monthFormat(key)}}</view>
+      <view class="content" wx:for="{{todos[key]}}" wx:for-index="index" wx:key="index">
+        <text>{{formattor.dateFormat(item.created_at,"hh:mm")}}</text>
+        <view class="detail">{{item.description}}</view>
       </view>
     </view>
   </scroll-view>

@@ -20,4 +20,18 @@ function dateFormat(date, format){
 
   return format
 }
-module.exports = { dateFormat: dateFormat }
+
+function monthFormat(date){
+  // 获取当前月份
+  // 获取当前day
+  // 对比 返回时间 是不是 大于等于7
+  // 是的话就 return xxx
+  var dateMonth = date.toString().substring(0,2)
+  var dateDay = date.toString().substring(2,4)
+
+  if (dateMonth[0] === "0") { dateMonth = dateMonth[1] }
+  if (dateDay[0] === "0") { dateDay = dateDay[1] }
+  return dateMonth + "月" + dateMonth + "日"
+}
+
+module.exports = { dateFormat: dateFormat, monthFormat: monthFormat }

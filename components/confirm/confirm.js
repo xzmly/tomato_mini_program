@@ -7,20 +7,31 @@ Component({
     visible: {
       type: Boolean,
       value: false
+    },
+    value: {
+      type: String,
+      value: ""
     }
   },
   data: {
-    value: ""
+    _value: ""
+  },
+  lifetimes: {
+    attached() {
+      if (this.properties.value) {
+        this.properties.value = this.data._value
+      }
+    }
   },
   methods: {
     confirm(){
-      this.triggerEvent('confirm', this.data.value)
+      this.triggerEvent('confirm', this.data._value)
     },
     cancel(){
-      this.triggerEvent('cancel', this.data.value)
+      this.triggerEvent('cancel', this.data._value)
     },
     watchValue(event){
-      this.data.value = event.detail.value
+      this.data._value = event.detail.value
     }
   }
 })
