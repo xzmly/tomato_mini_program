@@ -5,7 +5,7 @@
     </view>
     <view class="details">
       <open-data type='userNickName' class="name"></open-data>
-      <text>绑定pc账号</text>
+      <navigator url="/pages/binding/binding" wx:if="{{!me.account}}">绑定pc账号</navigator>
     </view>
     <button open-type="contact" class="qr">问题反馈</button>
     <!-- <view class="qr">问题反馈</view> -->

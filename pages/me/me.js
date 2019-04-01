@@ -5,11 +5,13 @@ Page({
   data: {
     tab: "tomato",
     tomatoes: {},
-    todos: {}
+    todos: {},
+    me: {}
   },
   onShow: function () {
     this.fetchTomatoes()
     this.fetchTodos()
+    this.setData({me: wx.getStorageSync('me')})
   },
   fetchTomatoes(){
     http.get('/tomatoes', { is_group: "yes" })

@@ -5,8 +5,8 @@
     <input bindinput="watchAccount" placeholder="账号" value="{{account}}"></input>
     <input bindinput="watchPassword" placeholder="密码" value="{{passowrd}}"></input>
   </view>
-  <t-button text="绑定" type="change" size="mini" wx:if="{{isBinding}}"></t-button>
-  <t-button text="注册" type="change" size="mini" wx:if="{{!isBinding}}"></t-button>
+  <t-button text="绑定" type="change" size="mini" bindtap='submit' wx:if="{{isBinding}}"></t-button>
+  <t-button text="注册" type="change" size="mini" bindtap='submit' wx:if="{{!isBinding}}"></t-button>
   <view class="tips" bindtap='goToSignUp' wx:if="{{isBinding}}">还没有PC账号，注册吧兄弟（点击注册）</view>
   <view class="tips" bindtap='goToBinding' wx:if="{{!isBinding}}">绑定PC账号，立即同步数据</view>
   <image src="../../images/tomato-bg.png" class="bg"></image>

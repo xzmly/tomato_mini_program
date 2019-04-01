@@ -15,7 +15,7 @@ Page({
   onShow: function () {
     this.startTimer()
     http.post('/tomatoes').then(response => {
-      this.tomato = response.data.resource
+      this.setData({ tomato: response.data.resource })
     })
   },
   startTimer(){
@@ -38,7 +38,6 @@ Page({
   },
   clearTimer(){
     clearInterval(this.timer)
-    console.log(this.timer)
     this.timer = null
     this.setData({ timerStatus: 'stop' })
   },
@@ -58,9 +57,9 @@ Page({
   },
   confirmAbandon(event){
     let content = event.detail
-    http.put(`/tomatoes/${this.tomato.id}`,{
+    http.put(`/tomatoes/${this.data.tomato.id}`,{
       description: content,
-      aborted: false
+      aborted: true
     })
     .then(response => {
       wx.navigateBack({ to: -1 })
@@ -82,8 +81,16 @@ Page({
   },
   onHide() {
     this.clearTimer()
+    http.put(`/tomatoes/${this.data.tomato.id}`, {
+      description: "退出放弃",
+      aborted: true
+    })
   },
   onUnload() {
     this.clearTimer()
+    http.put(`/tomatoes/${this.data.tomato.id}`, {
+      description: "退出放弃",
+      aborted: true
+    })
   },
 })
