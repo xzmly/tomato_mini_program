@@ -4,7 +4,6 @@ Page({
   data: {
     account: "",
     password_digest: "",
-    isBinding: true
   },
   watchAccount(event){
     this.setData({ account: event.detail.value })
@@ -14,20 +13,12 @@ Page({
   },
   submit(){
     http.post('/bindings',{
-      account:this.data.account,
+      account: this.data.account, 
       password_digest: this.data.password_digest
     })
     .then(response => {
       wx.setStorageSync('me', response.data.resource)
+      wx.reLaunch({ url: "/pages/home/home" })
     })
   },
-  goToSignUp(){
-    this.setData({ isBinding: false })
-  },
-  goToBinding(){
-    this.setData({ isBinding: true })
-  },
-  onShow: function (options) {
-    
-  }
 })

@@ -11,5 +11,4 @@
         withCredentials="true">
         登录
   </button>
-  <navigator url="/pages/binding/binding" class="binding">还没有与pc端绑定？去绑定 ></navigator>
 </view>
